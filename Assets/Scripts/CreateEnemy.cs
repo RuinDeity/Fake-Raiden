@@ -13,11 +13,8 @@ public class CreateEnemy : MonoBehaviour
     }
     void Create()
     {
-        System.Random a = new System.Random();
-        int number = a.Next(-10,10);
-        Vector2 CreatePlace;
-        CreatePlace.x = number;
-        CreatePlace.y = transform.position.y;
+        float x = Random.Range(-9f,9f);
+        Vector2 CreatePlace = new Vector2(x, transform.position.y);
         if (Time.time - temp > CreateTime)
         {
             Instantiate(Enemy, CreatePlace, Quaternion.identity);

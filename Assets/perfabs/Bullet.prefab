@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 6188481099822902435}
   - component: {fileID: -6731982371352838132}
   - component: {fileID: 7823032742925705279}
-  - component: {fileID: -1933069816880093898}
-  - component: {fileID: -5949577720539881523}
+  - component: {fileID: 3576099981423204763}
   m_Layer: 0
-  m_Name: PlayerBullet
+  m_Name: Bullet
   m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971215993759265569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3, y: -0.06, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.26669347, y: 0.29904515, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,7 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92dbf6fddddb70c49974a270e0954a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 0}
 --- !u!114 &7823032742925705279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,21 +108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8492d8d44599c4428511e78cf1aa3ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
---- !u!114 &-1933069816880093898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971215993759265569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d0a7541edefe7c46ab2487456b4226d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &-5949577720539881523
-BoxCollider2D:
+  speed: 20
+  isPlayer: 0
+--- !u!70 &3576099981423204763
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -137,15 +124,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Direction: 0
