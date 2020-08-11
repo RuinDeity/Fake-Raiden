@@ -15,18 +15,7 @@ public class Pause : MonoBehaviour
         canvas.enabled = true;
     }
 
-    private void Start()
-    {
-        if (SceneManager.GetActiveScene().buildIndex != 1)
-        {
-            canvas.enabled = false;
-        }
-    }
-    public void StartOne()
-    {
-        SceneManager.LoadScene(0);
-        Time.timeScale = 1;
-    }
+
 
     public void RestartGame()
     {
