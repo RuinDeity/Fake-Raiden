@@ -8,7 +8,7 @@ public class moveDown : MonoBehaviour
 
     void Update()
     {
-        Vector2 movement = Vector2.down * Screenspeed * Time.deltaTime;
+        Vector2 movement = Vector2.up * Screenspeed * Time.deltaTime;
         transform.Translate(movement);
     }
 }

@@ -17,7 +17,7 @@ public class CreateEnemy : MonoBehaviour
         Vector2 CreatePlace = new Vector2(x, transform.position.y);
         if (Time.time - temp > CreateTime)
         {
-            Instantiate(Enemy, CreatePlace, Quaternion.identity);
+            Instantiate(Enemy, CreatePlace, Quaternion.Euler(new Vector3(0,0,180)));
             temp = Time.time;
         }
         
