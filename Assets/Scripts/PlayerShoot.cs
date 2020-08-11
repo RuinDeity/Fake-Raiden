@@ -13,8 +13,7 @@ public class PlayerShoot : MonoBehaviour
 
     public void shootBullet() {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            GameObject Bullet =Instantiate(bullet, firePoint.position, Quaternion.identity);
-            bullet.GetComponent<BulletMovement>().isPlayer = true;
+            GameObject Bullet =Instantiate(bullet, firePoint.position, transform.rotation);
         }
     }
 }

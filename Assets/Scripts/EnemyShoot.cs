@@ -12,8 +12,7 @@ public class EnemyShoot : MonoBehaviour
     {
         if(Time.time> nextFiretime)
         {
-            GameObject bullet = Instantiate(EnemyBullet, firePoint.position, Quaternion.identity);
-            bullet.GetComponent<BulletMovement>().isPlayer = false;
+            GameObject bullet = Instantiate(EnemyBullet, firePoint.position, transform.rotation);
             nextFiretime = Time.time + fireRate;
         } 
     }
